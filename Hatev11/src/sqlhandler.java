@@ -378,10 +378,10 @@ String query="";
              monsterid=rs2.getInt("id");
              monstername=rs2.getString("monstername");
               monsterrace=rs2.getString("monsterrace");
-              mstrength=rs2.getInt("mstrength");
-              mdefense=rs2.getInt("mdefense");
+              mstrength=rs2.getInt("strength");
+              mdefense=rs2.getInt("defense");
              System.out.println(guserid+" "+gusername);
-                username = rs2.getString("username");
+          
                 if(monstername != null && !monstername.isEmpty()) { 
             	   out.println("You found a mosnter: "+monstername+"!"); 
                    foundmonster=1;

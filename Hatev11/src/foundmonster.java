@@ -4,11 +4,14 @@ import java.io.PrintStream;
 import static java.lang.System.in;
 
 
+
 class foundmonster
 {
 
     private final DataInputStream in;
     private final PrintStream out;
+    private String line;
+ 
   /*  private PrintStream out;
 
     actions(PrintStream out) {
@@ -24,13 +27,12 @@ class foundmonster
          this.out = out;
          this.in = in;
           }
-    void monstertask(int userid, int monsterid, String monstername) throws IOException
+    void monstertask(int userid, int monsterid, String monstername, String monsterrace) throws IOException
     {
-       if(line.equals("test")){
+      out.println("You have found monster called "+monstername+" from the race "+monsterrace);
 while((line = in.readLine()) != null && !line.equals(".")) {
     out.println("HHH: "+line);
-    break;
-}
+ 
        }
 // perfectly defined now because out is an attribute
     }
