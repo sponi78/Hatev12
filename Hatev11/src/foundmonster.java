@@ -11,6 +11,16 @@ class foundmonster
     private final DataInputStream in;
     private final PrintStream out;
     private String line;
+ public int luserid;
+public  int lmonsterid;
+public String lmonstername;
+public String lmonsterrace;
+public String lmdescription;
+public int lmgold;
+public int ustrength;
+public int udefense;
+public int lstrength;
+public int ldefense;
  
   /*  private PrintStream out;
 
@@ -27,14 +37,48 @@ class foundmonster
          this.out = out;
          this.in = in;
           }
-    void monstertask(int userid, int monsterid, String monstername, String monsterrace) throws IOException
+    void monstertask(int userid, int monsterid, String monstername, String monsterrace, String mdescription, int mgold, int mdefense, int mstrength) throws IOException
     {
+        
+        sqlhandlertwo userinfo;
+        userinfo = new sqlhandlertwo(out);
+        luserid= userid;
+        lmonsterid= monsterid;
+        lmonstername=monstername;
+        lmonsterrace= monsterrace;
+        lmgold = mgold;
+        lstrength=mstrength;
+        ldefense=mdefense;
       out.println("You have found monster called "+monstername+" from the race "+monsterrace);
+      out.println(mdescription);
+      out.println("What are you willing to do");
 while((line = in.readLine()) != null && !line.equals(".")) {
-    out.println("HHH: "+line);
- 
+    userinfo.userinfo(userid);
+    ustrength=userinfo.ustrength;
+    udefense=userinfo.udefense;
+    
+    if (line.equals("try to flee")){
+        out.println("You are trying to flee...");
+        
+    }else if
+            (line.equals("attack")){
+  out.println("You are trying to attak the monster");
+  this.attack();
        }
-// perfectly defined now because out is an attribute
-    }
 
+else if(line.equals("try to rob monster")){
+ out.println("You are trying to rob the monster");
+       }
+else{
+    
+    out.println("Sorry, i didn't understand your comment");
+}
+
+}//End While
+}//End Method
+    void attack(){
+        
+        
+        
+    }
 }

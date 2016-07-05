@@ -35,6 +35,8 @@ public int mposy;
 public int mstrength;
 public int mdefense;
 	  private PrintStream out;
+    public String mdescription;
+    public int mgold;
 
 	   sqlhandler(PrintStream out) {
 	        this.out = out;
@@ -379,11 +381,13 @@ String query="";
              monstername=rs2.getString("monstername");
               monsterrace=rs2.getString("monsterrace");
               mstrength=rs2.getInt("strength");
+              mdescription=rs2.getString("monster_description");
+              mgold=rs2.getInt("gold");
               mdefense=rs2.getInt("defense");
              System.out.println(guserid+" "+gusername);
           
                 if(monstername != null && !monstername.isEmpty()) { 
-            	   out.println("You found a mosnter: "+monstername+"!"); 
+            	  // out.println("You found a mosnter: "+monstername+"!"); 
                    foundmonster=1;
                
                }
