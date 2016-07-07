@@ -170,7 +170,8 @@ class doComms implements Runnable {
                 System.out.println("mconfront: " + mconfront);
                 if (mconfront == 1) {
 
-                    foundmonster.monstertask(userid, sqlstuff.monsterid, sqlstuff.monstername, sqlstuff.monsterrace, sqlstuff.mdescription, sqlstuff.mgold, sqlstuff.mdefense,sqlstuff.mstrength);
+                    foundmonster.monstertask(userid, sqlstuff.monsterid, sqlstuff.monstername, sqlstuff.monsterrace, sqlstuff.mdescription, sqlstuff.mgold, sqlstuff.mdefense,sqlstuff.mstrength,
+                            sqlstuff.menergy,sqlstuff.mmagic_defense,sqlstuff.mpoison_defense,sqlstuff.mcurse_defense);
                     mconfront = 0;
                 }
 

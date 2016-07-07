@@ -21,6 +21,11 @@ public int ustrength;
 public int udefense;
 public int lstrength;
 public int ldefense;
+
+public int lmagic_defense;
+public int lpoison_defense;
+public int lcurse_defense;
+public int lenergy;
  
   /*  private PrintStream out;
 
@@ -37,7 +42,7 @@ public int ldefense;
          this.out = out;
          this.in = in;
           }
-    void monstertask(int userid, int monsterid, String monstername, String monsterrace, String mdescription, int mgold, int mdefense, int mstrength) throws IOException
+    void monstertask(int userid, int monsterid, String monstername, String monsterrace, String mdescription, int mgold, int mdefense, int mstrength, int menergy,int mmagic_defense,int mpoison_defense,int mcurse_defense) throws IOException
     {
         
         sqlhandlertwo userinfo;
@@ -49,6 +54,11 @@ public int ldefense;
         lmgold = mgold;
         lstrength=mstrength;
         ldefense=mdefense;
+       lmagic_defense=mmagic_defense;
+lpoison_defense=mpoison_defense;
+ lcurse_defense=mcurse_defense;
+lenergy=menergy;
+        
       out.println("You have found monster called "+monstername+" from the race "+monsterrace);
       out.println(mdescription);
       out.println("What are you willing to do");
