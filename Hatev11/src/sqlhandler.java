@@ -25,6 +25,11 @@ public String gusername;
 public int gstrength;
 public int gdefense;
 public int monsterid;
+public int genergy;
+public int gmagic_defense;
+public int gpoison_defense;
+public int gcurse_defense;
+public int ggold;
 
 public int founduser;
 public int foundmonster;
@@ -34,6 +39,11 @@ public int mposx;
 public int mposy;
 public int mstrength;
 public int mdefense;
+public int menergy;
+public int mmagic_defense;
+public int mpoison_defense;
+public int mcurse_defense;
+
 	  private PrintStream out;
     public String mdescription;
     public int mgold;
@@ -334,6 +344,13 @@ String query="";
              System.out.println("FOUND!!!!!");
              guserid=rs2.getInt("id");
              gusername=rs2.getString("username");
+             
+              genergy=rs2.getInt("energy");
+              gmagic_defense=rs2.getInt("magic_defense");
+              gcurse_defense=rs2.getInt("curse_defense");
+              gpoison_defense=rs2.getInt("poisondefense");
+             ggold=rs2.getInt("gold");
+             
              System.out.println(guserid+" "+gusername);
                 username = rs2.getString("username");
                 if(username != null && !username.isEmpty()) { 
@@ -384,6 +401,10 @@ String query="";
               mdescription=rs2.getString("monster_description");
               mgold=rs2.getInt("gold");
               mdefense=rs2.getInt("defense");
+              menergy=rs2.getInt("energy");
+              mmagic_defense=rs2.getInt("magic_defense");
+              mcurse_defense=rs2.getInt("curse_defense");
+              mpoison_defense=rs2.getInt("poison_defense");
              System.out.println(guserid+" "+gusername);
           
                 if(monstername != null && !monstername.isEmpty()) { 

@@ -17,6 +17,10 @@ private        String startmessage;
 
 public int ustrength;
 public int udefense;
+public int uenergy;
+public int umagic_defense;
+public int upoison_defense;
+public int ucurse_defense;
 
 
 
@@ -55,7 +59,10 @@ public int udefense;
    
      ustrength = rs.getInt("strength");
       udefense = rs.getInt("defense");
-  
+      uenergy=rs.getInt("energy");
+              umagic_defense=rs.getInt("magic_defense");
+              ucurse_defense=rs.getInt("curse_defense");
+              upoison_defense=rs.getInt("poison_defense");
     
         // print the results
     
