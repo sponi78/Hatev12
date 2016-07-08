@@ -26,6 +26,10 @@ public int lmagic_defense;
 public int lpoison_defense;
 public int lcurse_defense;
 public int lenergy;
+public int umagic_defense;
+public int upoison_defense;
+public int ucurse_defense;
+public int uenergy;
  
   /*  private PrintStream out;
 
@@ -66,6 +70,10 @@ while((line = in.readLine()) != null && !line.equals(".")) {
     userinfo.userinfo(userid);
     ustrength=userinfo.ustrength;
     udefense=userinfo.udefense;
+    umagic_defense=userinfo.umagic_defense;
+    upoison_defense=userinfo.upoison_defense;
+    ucurse_defense=userinfo.ucurse_defense;
+    uenergy=userinfo.uenergy;
     
     if (line.equals("try to flee")){
         out.println("You are trying to flee...");
